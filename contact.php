@@ -34,18 +34,29 @@
       <div class="header">
         <nav>
           <ul class="nav nav-pills pull-right">
-            <li role="presentation" class="active"><a href="#">Home</a></li>
-            <li role="presentation"><a href="about.php">About</a></li>
-            <li role="presentation"><a href="contact.php">Contact</a></li>
+            <li role="presentation" ><a href="index.php">Home</a></li>
+            <li role="presentation" ><a href="about.php">About</a></li>
+            <li role="presentation" class="active"><a href="#">Contact</a></li>
           </ul>
         </nav>
         <h3 class="text-muted">Apache Graphical User Interface</h3>
       </div>
 
       <div class="jumbotron">
-        <h1>Apache GUI</h1>
-        <p class="lead">User Interface to make website and host them locally on your computer</p>
-        <p><a class="btn btn-lg btn-success" href="setup.php" role="button">Setup</a></p>
+        <h2>Contact Us <!-- Report Bug and feed back here --></h2>
+        <p class="lead">Report Bug and Feedback here</p>
+        
+        <form class="form-horizontal" role="form">
+          <textarea class="form-control" rows="3"></textarea>
+       <div class="form-group">
+        <!-- <div class="col-sm-offset-2 col-sm-10"> -->
+         <!-- <button type="submit" class="btn btn-default">Sign in</button> -->
+         <p><a class="btn  btn-success btn-xm" type="submit" role="button">Send</a></p>
+         <!-- <button type="button" class="btn btn-success">Success</button> -->
+    </div>
+  </div>
+</form>
+        <!-- <p><a class="btn btn-lg btn-success" href="setup.php" role="button">Setup</a></p> -->
       </div>
 
       <!-- <div class="row marketing">

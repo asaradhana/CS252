@@ -34,8 +34,8 @@
       <div class="header">
         <nav>
           <ul class="nav nav-pills pull-right">
-            <li role="presentation" class="active"><a href="#">Home</a></li>
-            <li role="presentation"><a href="about.php">About</a></li>
+            <li role="presentation" ><a href="index.php">Home</a></li>
+            <li role="presentation" class="active"><a href="#">About</a></li>
             <li role="presentation"><a href="contact.php">Contact</a></li>
           </ul>
         </nav>
@@ -43,9 +43,9 @@
       </div>
 
       <div class="jumbotron">
-        <h1>Apache GUI</h1>
-        <p class="lead">User Interface to make website and host them locally on your computer</p>
-        <p><a class="btn btn-lg btn-success" href="setup.php" role="button">Setup</a></p>
+        <h2> About Apache GUI</h2>
+        <p class="lead">User Interface to make website and host them locally on your computer.This also comes handy to test your websites before uploading them on a remote server.</p>
+        <!-- <p><a class="btn btn-lg btn-success" href="setup.php" role="button">Setup</a></p> -->
       </div>
 
       <!-- <div class="row marketing">
