@@ -19,6 +19,16 @@
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="dist/assets/js/ie-emulation-modes-warning.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="jquery.metisMenu.js"></script>
+    <script>
+    $(function () {
+    $('#menu').metisMenu({
+    toggle: false // disable the auto collapse. Default: true.
+    });
+    });
+    </script>
+
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -57,7 +67,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
-          <ul class="nav nav-sidebar">
+          <ul class="nav nav-sidebar" id="menu">
             <li class="active"><a href="#">Apache Server Control<span class="sr-only">(current)</span></a></li>
             <li><a href="#">Apache Server Configuration</a></li>
             <li><a href="#">Apache Log Statics</a></li>
@@ -71,6 +81,10 @@
           <ul class="nav nav-sidebar">
             <li><a href="">Home Page</a></li>
             <li><a href="">Your Blog</a></li>
+            <ul>
+              <li>First Blog</li>
+              <li>Second Item</li>
+            </ul>
             <li><a href="">Signin/Signup site</a></li>
             <li><a href="">Static Website</a></li>
             <!-- <li><a href="">More navigation</a></li> -->
