@@ -112,7 +112,15 @@ $output = shell_exec($cmd);
             <h2 class="blog-post-title"><?php $posttitle = $_POST['blog_post_title']; echo $posttitle; ?></h2>
             <p class="blog-post-meta"><?php $today = date("F j, Y"); echo $today; ?> By <a href="#"><?php $author = $_POST['author']; echo $author; ?></a></p>
             <p><?php echo '<img src="'.basename($_FILES["fileToUpload"]["name"]).'" width="600" >'; ?></p>
-            <p><?php $postcontent = $_POST['postcontent']; echo $postcontent; ?></p>
+    
+            <?php  $postcontent = $_POST['postcontent'];
+
+            $array=explode("\n", $postcontent);
+            foreach ($array as $key) {
+              echo "<p> $key </p>";
+            }
+            
+             ?>
           </div><!-- /.blog-post -->
 
           <!-- <nav>

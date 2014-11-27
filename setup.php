@@ -65,7 +65,7 @@
           <p>This software is PHP server for your computer. This software is also automatically installed in your computer while you were installing this software.If your here then don't worry this sofware is working fine.</p></li>
           <li id="left"><h4>MySql</h4>
           <p>This software is Mysql server for your computer.This software is required to hold your all databases required by your website. This software is not yet installed in your computer. This software not required for static websites so you can install it now or may be some time later whenever you require.</p></li>
-          <p><a class="btn btn-lg btn-success" href="install_mysql.php" role="button">Install Mysql Server</a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<a  class="btn btn-lg btn-default" href="dashboard.php" role="button">Next</a></p>
+          <p><a  class="btn btn-lg btn-default" href="dashboard.php" role="button">Next</a></p>
           
         </ul>
         <!-- <p class="lead">User Interface to make website and host them locally on your computer</p> -->

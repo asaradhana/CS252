@@ -129,8 +129,8 @@
               </div>
               <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                 <div class="panel-body" id="description">
-                   Apache can be started by the following command:<br>
-                    <code>/etc/init.d/apache2 restart</code>
+                   Apache can be started by the following command: <br/>
+                    <pre>sudo /etc/init.d/apache2 restart</pre>
                 </div>
               </div>
             </div>
@@ -144,8 +144,8 @@
               </div>
               <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                 <div class="panel-body" id="description">
-                  Apache can be stopped by the following command:<br>
-                    <code>/etc/init.d/apache2 stop</code>
+                  Apache can be stopped by the following command: <br/>
+                    <pre>sudo /etc/init.d/apache2 stop</pre>
 
                 </div>
               </div>

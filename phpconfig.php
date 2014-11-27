@@ -114,9 +114,9 @@
               <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                 <div class="panel-body" id="description">
                 PHP is a server-side scripting language designed for web development but also used as a 
-                general-purpose programming language. PHP code can be simply mixed with HTML code, or 
+                general-purpose programming language. PHP pre can be simply mixed with HTML pre, or 
                 it can be used in combination with various templating engines and web frameworks.
-                PHP code can generate a web page's HTML code, an image, or some other data. PHP 
+                PHP pre can generate a web page's HTML pre, an image, or some other data. PHP 
                 can be deployed on most web servers on almost every operating system and platform.
                 Almost all the basic configurations of PHP can be changed by simply editing the <br>
                 <mark><u>etc/php5/apache2/php.ini</u></mark> file.
@@ -134,9 +134,9 @@
               </div>
               <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                 <div class="panel-body" id="description">
-                  Short open tags look like this: <code>&lt? ?&gt</code>. This option must be set to 
+                  Short open tags look like this: <pre>&lt? ?&gt</pre>. This option must be set to 
                   <b>Off</b> if you want to use XML functions. It is highly recommended to keep the 
-                  setting as <br> <code>short_open_tag = Off</code> in <mark><u>php.ini</u></mark> file.
+                  setting as <br> <pre>short_open_tag = Off</pre> in <mark><u>php.ini</u></mark> file.
                 </div>
               </div>
             </div>
@@ -155,7 +155,7 @@
                    bash files with 'sudo' commands, it is needed that you turn this flaf to <b>Off</b>.
                    If this is set to <b>On</b>, you probably compiled PHP with the <em>--enable-safe-mode</em>
                    flag. The default value in <mark><u>php.ini</u></mark> file is <br>
-                   <code>safe_mode = Off</code> 
+                   <pre>safe_mode = Off</pre> 
                 </div>
               </div>
             </div>
@@ -173,7 +173,7 @@
                   is terminated by the parser. This helps prevent poorly written scripts from tying up 
                   the server. The default setting is 30. When running PHP from the command line the 
                   default setting is 0. This can be changed by giving an integer value in the <br>
-                  <code>max_execution_time</code> flag in the <mark><u>php.ini</u></mark> file.
+                  <pre>max_execution_time</pre> flag in the <mark><u>php.ini</u></mark> file.
                 </div>
               </div>
             </div>

@@ -120,11 +120,11 @@
                  <br /><br />
                 <p>Run the following  on your teminal to do respective action</p>
                 <p>Starting Mysql </p>
-                <code>sudo service mysql start</code>
+                <pre>sudo service mysql start</pre>
                 <p>Stopping Mysql </p>
-                <code>sudo service mysql stop</code>
+                <pre>sudo service mysql stop</pre>
                 <p>Restarting Mysql </p>
-                <code>sudo service mysql restart</code>
+                <pre>sudo service mysql restart</pre>
                 </div>
               </div>
             </div>
@@ -140,7 +140,7 @@
             <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                 <div class="panel-body" id="description">
                    MySQL can be installed by the following command:<br>
-                  <code>sudo apt-get install mysql-server libapache2-mod-auth-mysql php5-mysql</code>
+                  <pre>sudo apt-get install mysql-server libapache2-mod-auth-mysql php5-mysql</pre>
                   <br> After the installation, you can change the <em>bind address</em> to your own internal
                   ip address. You can also set your root password for MySQL.
                   
@@ -164,18 +164,18 @@
                   user names (login names) as used by Windows or Unix. On Unix, most MySQL clients by 
                   default try to log in using the current Unix user name as the MySQL user name, but 
                   that is for convenience only. The default can be overridden easily, because client 
-                  programs permit any user name to be specified with a <code>-u</code> or 
-                  <code>--user</code> option.
+                  programs permit any user name to be specified with a <pre>-u</pre> or 
+                  <pre>--user</pre> option.
 
                   <a href="mysql_adduser.sh"><h4>click here to download the script</h4></a>
-                  <code>#!/bin/bash
+                  <pre>#!/bin/bash
                         user= $1
                         pass= $2
                         mysql -u root -p  << EOF
                         CREATE USER '$user'@'localhost' IDENTIFIED BY '$pass';
                         GRANT ALL PRIVILEGES ON * . * TO '$user'@'localhost';
                         flush privileges;
-                        EOF</code>
+                        EOF</pre>
                 </div>
               </div>
             </div>
@@ -197,14 +197,14 @@
                    the user table using its own algorithm.
 
                    <a href="mysql_passchange.sh"><h4>click here to download the script</h4></a>
-                  <code>#!/bin/bash
+                  <pre>#!/bin/bash
                     pass1= $1
                     pass2= $2
                     mysql -u root -p '$pass1' << EOF
                     use mysql;
                     update user set password=PASSWORD('$pass2') where User='root';
                     flush privileges;
-                    EOF</code>
+                    EOF</pre>
 
 
                 </div>
@@ -225,15 +225,15 @@
                   The MySQL server listens on a single network socket for TCP/IP connections which can
                   be specified by the bind address. This socket is bound to a single address, but it is
                    possible for an address to map onto multiple network interfaces. The default address 
-                   is 0.0.0.0. To specify an address explicitly, use the <code>--bind-address=addr</code>
+                   is 0.0.0.0. To specify an address explicitly, use the <pre>--bind-address=addr</pre>
                     option at server startup, where <em>addr</em> is an IPv4 address or a host name.
                 
                     <a href="mysql_bind.sh"><h4>click here to download the script</h4></a>
-                  <code>#!/usr/bin/bash
+                  <pre>#!/usr/bin/bash
                       rep="bind-address = 127.0.0.1"
                       bindad=$1
                       line="bind-address = '$bindad'"
-                      sed -i "s/$rep/$line/" /etc/mysql/my.cnf</code>
+                      sed -i "s/$rep/$line/" /etc/mysql/my.cnf</pre>
                 </div>
               </div>
             </div>

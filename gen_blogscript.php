@@ -21,7 +21,7 @@ if(isset($_POST["submit"])) {
 }
 // Check if file already exists
 if (file_exists($target_file)) {
-    echo "Sorry, file already exists.";
+    // echo "Sorry, file already exists.";
     $uploadOk = 0;
 }
 // Check file size
@@ -37,7 +37,7 @@ if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg
 }
 // Check if $uploadOk is set to 0 by an error
 if ($uploadOk == 0) {
-    echo "Sorry, your file was not uploaded.";
+    // echo "Sorry, your file was not uploaded.";
 // if everything is ok, try to upload file
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
@@ -46,6 +46,10 @@ if ($uploadOk == 0) {
         echo "Sorry, there was an error uploading your file.";
     }
 }
+
+$cmd = 'cp '.$target_file.' '.basename($_FILES["fileToUpload"]["name"]);
+// echo $cmd;
+$output = shell_exec($cmd);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -105,7 +109,15 @@ if ($uploadOk == 0) {
             <h2 class="blog-post-title"><?php $posttitle = $_POST['blog_post_title']; echo $posttitle; ?></h2>
             <p class="blog-post-meta"><?php $today = date("F j, Y"); echo $today; ?> By <a href="#"><?php $author = $_POST['author']; echo $author; ?></a></p>
             <p><?php echo '<img src="'.basename($_FILES["fileToUpload"]["name"]).'" width="600" >'; ?></p>
-            <p><?php $postcontent = $_POST['postcontent']; echo $postcontent; ?></p>
+            <?php  $postcontent = $_POST['postcontent'];
+
+            $array=explode("\n", $postcontent);
+            foreach ($array as $key) {
+              echo "<p> $key </p>";
+            }
+            
+             ?>
+
           </div><!-- /.blog-post -->
 
           <!-- <nav>

@@ -94,7 +94,7 @@
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
          
           <!-- <form class="form-horizontal" role="form" action="gen_hompagescript.php" method="post"> -->
-          <form class="form-horizontal" role="form" action="test.php" method="post">
+          <form class="form-horizontal" role="form" action="test.php" method="POST" enctype="multipart/form-data" >
           <div class="form-group">
               <label for="name" class="col-sm-2 control-label" >Name</label>
               <div class="col-sm-10">
@@ -131,6 +131,15 @@
                 <input name="twitter" type="text" class="form-control" id="name" placeholder="eg: https://www.twitter.com/amitkmr/" ng-model="formInfo.Name">
               </div>
             </div>
+
+            <div class="form-group">
+              <label for="linkedin" class="col-sm-2 control-label" >LinkedIn</label>
+              <div class="col-sm-10">
+                <input name="linkedin" type="text" class="form-control" id="linedin" placeholder="eg: https://www.linkedin.com/amitkmr/" ng-model="formInfo.Name">
+              </div>
+            </div>
+
+
             <div class="form-group">
               <label for="phone" class="col-sm-2 control-label">Phone Number</label>
               <div class="col-sm-10">
@@ -143,6 +152,14 @@
                <textarea name="address" cols="100" rows="5" id="address" placeholder="Please enter the house no., street, city, state and country name in separate lines"></textarea>
 			       </div>
             </div>
+
+            <div class="form-group">
+              <label for="skills" class="col-sm-2 control-label" >Skills</label>
+              <div class="col-sm-10">
+                <input name="skills" type="text" class="form-control" id="skills" placeholder="eg:Web Developer - Graphic Artist - User Experience Designer" ng-model="formInfo.Name">
+              </div>
+            </div>
+
 			      <div class="form-group">
                <label for="resume" class="col-sm-2 control-label">Upload resume</label>
               <div class="col-sm-10">
@@ -150,7 +167,7 @@
              </div>
            </div>
            <div class="form-group">
-               <label for="blogimage" class="col-sm-2 control-label">Blog Image</label>
+               <label for="blogimage" class="col-sm-2 control-label">Upload Profile pic </label>
               <div class="col-sm-10">
                <input type="file" name="fileToUpload" id="fileToUpload">
              </div>

@@ -36,6 +36,7 @@
     #desc_head{
       font-size: 25px;
     }
+    
     </style>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -129,14 +130,14 @@
           <br><br>
                 <u><mark>/etc/apache2/sites-available/default</mark></u>
                 <a href="document_replace.sh"><h4>Script Here</h4></a>
-                    <code>#!/usr/bin/bash
+                    <pre>#!/usr/bin/bash
                       echo "name of document root path var\/www\/your root name"
                       read rep;
                       #rep = $1
                       echo $rep;
                       line="var\/www\/html"
                       sed -i "s/$line/$rep/" /etc/apache2/sites-available/000-default.conf
-                      </code>
+                      </pre>
                 </div>
               </div>
             </div>
@@ -169,11 +170,11 @@
       <p>
                    <a href="replace_perl.sh"><h4>Click here to download script</h4></a>
 
-                   <code>#!/usr/bin/bash
+                   <pre>#!/usr/bin/bash
                       echo "enter your listen port ";
                       read portno;
                       sed -i "s/80/$portno/" /etc/apache2/ports.conf
-                      </code>
+                      </pre>
                 </div>
               </div>
             </div>
@@ -188,17 +189,16 @@
               </div>
               <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                 <div class="panel-body" id="description">
-                  A 404 error message is the standard HTTP standard response code which is returned when 
+                  A 404 error message is the standard HTTP standard response pre which is returned when 
                   the visitor cannot communicate with the server. Visitor gets a standardized undesirable 
                   404 Error Page and it’s unlikely that he will make the effort to see any part of your site. 
                   Therefore it is important to create a 404 page on your site and redirect traffic from 
                   incorrect urls to it which can be done by a <u><mark>.htaccess</mark></u> file.
 
                   <a href="redirect404.sh"><h4>click here to download the script</h4></a>
-                  <code>#!/bin/bash
-                      echo "ErrorDocument 404 404.php" > /var/www/CS252-master/.htaccess
-                      echo "Page not found" > /var/www/CS252-master/404.php
-                      service apache2 restart</code>
+                  <pre>#!/bin/bash <br/>
+                      echo "ErrorDocument 404 404.php" > /var/www/CS252/.htaccess 
+                      echo "Page not found" > /var/www/CS252/404.php 
                 </div>
               </div>
             </div>
@@ -213,16 +213,16 @@
               </div>
               <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
                 <div class="panel-body" id="description">
-                  The 403 Forbidden error is an HTTP status code that means that accessing the page or 
+                  The 403 Forbidden error is an HTTP status pre that means that accessing the page or 
                   resource you were trying to reach is absolutely forbidden for some reason. Sometimes,
                   it is beneficial to create a 404 page on your site and redirect traffic from 
                   incorrect urls to it which can be done by a <u><mark>.htaccess</mark></u> file.
 
                   <a href="redirect403.sh"><h4>click here to download the script</h4></a>
-                  <code>#!/bin/bash
-                      echo "ErrorDocument 403 403.php" >> /var/www/CS252-master/.htaccess
-                      echo "Sorry, you landed on a forbidden page!" > /var/www/CS252-master/403.php
-                      service apache2 restart</code>
+                  <pre>#!/bin/bash
+                      echo "ErrorDocument 403 403.php" >> /var/www/CS252/.htaccess
+                      echo "Sorry, you landed on a forbidden page!" > /var/www/CS252/403.php
+                      service apache2 restart</pre>
                 </div>
               </div>
             </div>
