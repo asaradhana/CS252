@@ -1,0 +1,4 @@
+<?php
+      $output = shell_exec('gedit test.php');
+      // echo "<pre>$output</pre>";
+    ?>

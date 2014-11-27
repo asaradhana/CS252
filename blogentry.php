@@ -53,7 +53,7 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="dashboard.php">Dashboard</a></li>
-            <li><a href="settings.php">Settings</a></li>
+            <li><a href="#">Settings</a></li>
             <!-- <li><a href="#">Profile</a></li> -->
             <li><a href="#">Help</a></li>
           </ul>
@@ -68,35 +68,29 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar" id="menu">
-            <li class="active"><a href="#">Apache Server Control<span class="sr-only">(current)</span></a></li>
-            <li><a href="#">Apache Server Configuration</a></li>
-            <li><a href="#">Apache Log Statics</a></li>
+            <li><a href="dashboard.php">Apache Server Control<span class="sr-only">(current)</span></a></li>
+            <li><a href="apacheconfig.php">Apache Server Configuration</a></li>
+            <!-- <li><a href="#">Apache Log Statics</a></li> -->
             <!-- <li><a href="#">Export</a></li> -->
           </ul>
           <ul class="nav nav-sidebar">
-            <li><a href="">PHP Server Configuration</a></li>
-            <li><a href="">Mysql Server Configuration</a></li>
+            <li><a href="phpconfig.php">PHP Server Configuration</a></li>
+            <li><a href="mysqlconfig.php">Mysql Server Configuration</a></li>
             <!-- <li><a href="">Another nav item</a></li> -->
           </ul>
           <ul class="nav nav-sidebar">
-            <li><a href="http://localhost/CS252-master/homepage.php">Home Page</a></li>
-            <li><a href="">Your Blog</a></li>
-            <ul>
-              <li>First Blog</li>
-              <li>Second Item</li>
-            </ul>
-            <li><a href="">Signin/Signup site</a></li>
-            <li><a href="">Static Website</a></li>
-            <!-- <li><a href="">More navigation</a></li> -->
+            <li><a href="gen_homepage.php">Home Page</a></li>
+              <li><a href="gen_blog.php">Make a New Blog</a></li>
+              <li class="active"><a href="blogentry.php">Post a New Article</a></li>
           </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
          
-          <form class="form-horizontal" role="form">
+          <form class="form-horizontal" role="form" action="blogentry_script.php" method="POST" enctype="multipart/form-data">
             <div class="form-group">
               <label for="entrytitle" class="col-sm-2 control-label">Title</label>
               <div class="col-sm-10">
-                <input name="entrytitle" type="text" class="form-control" id="entrytitle" placeholder="Title for your blog entry">
+                <input name="blog_post_title" type="text" class="form-control" id="entrytitle" placeholder="Title for your blog entry">
               </div>
             </div>
              <div class="form-group">
@@ -108,9 +102,13 @@
             <div class="form-group">
               <label for="blog" class="col-sm-2 control-label">Content</label>
               <div class="col-sm-10">
-               <textarea name="blog" cols="100" rows="25" id="blog" placeholder="And here goes your content for the blog post!!"></textarea>
-			        </div>
+               <textarea name="postcontent" cols="100" rows="25" id="blog" placeholder="And here goes your content for the blog post!!"></textarea>
+              </div>
             </div>
+            <label for="blogimage" class="col-sm-2 control-label">Blog Image</label>
+              <div class="col-sm-10">
+               <input type="file" name="fileToUpload" id="fileToUpload">
+             </div>
              <br><br><br>
             <div class="form-group">
               <div class="col-sm-offset-2 col-sm-10">

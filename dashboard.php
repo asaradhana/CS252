@@ -20,16 +20,25 @@
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="dist/assets/js/ie-emulation-modes-warning.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="jquery.metisMenu.js"></script>
-    <script>
-    $(function () {
-    $('#menu').metisMenu({
-    toggle: false // disable the auto collapse. Default: true.
-    });
-    });
-    </script>
+   
+
+   <script src="jquery.metisMenu.js"></script>
+   <script>
+       $(function () {
+           $('#menu').metisMenu();
+       });
+   </script>
 
 
+
+    <style type="text/css"> 
+    #description{
+      font-size: 20px;
+    }
+    #desc_head{
+      font-size: 25px;
+    }
+    </style>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -53,7 +62,7 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="dashboard.php">Dashboard</a></li>
-            <li><a href="settings.php">Settings</a></li>
+            <li><a href="#">Settings</a></li>
             <!-- <li><a href="#">Profile</a></li> -->
             <li><a href="#">Help</a></li>
           </ul>
@@ -67,184 +76,84 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
-          <ul class="nav nav-sidebar" id="menu">
-            <li class="active"><a href="#">Apache Server Control<span class="sr-only">(current)</span></a></li>
-            <li><a href="#">Apache Server Configuration</a></li>
-            <li><a href="#">Apache Log Statics</a></li>
-            <!-- <li><a href="#">Export</a></li> -->
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="dashboard.php">Apache Server Control<span class="sr-only">(current)</span></a></li>
+            <li><a href="apacheconfig.php">Apache Server Configuration</a></li>
           </ul>
           <ul class="nav nav-sidebar">
-            <li><a href="">PHP Server Configuration</a></li>
-            <li><a href="">Mysql Server Configuration</a></li>
+            <li><a href="phpconfig.php">PHP Server Configuration</a></li>
+            <li><a href="mysqlconfig.php">Mysql Server Configuration</a></li>
             <!-- <li><a href="">Another nav item</a></li> -->
           </ul>
           <ul class="nav nav-sidebar">
-            <li><a href="">Home Page</a></li>
-            <li><a href="">Your Blog</a></li>
-            <ul>
-              <li>First Blog</li>
-              <li>Second Item</li>
-            </ul>
-            <li><a href="">Signin/Signup site</a></li>
-            <li><a href="">Static Website</a></li>
+            <li><a href="gen_homepage.php">Home Page</a></li>
+            <!-- <li id="menu"><a href="gen_blog.php">Manage Blog</a></li> -->
+            <!-- <ul> -->
+              <li><a href="gen_blog.php">Make a New BLog</a></li>
+              <li><a href=" blogentry.php">Post a New Article</a></li>
+            <!-- </ul> -->
+            <!-- <li><a href="">Signin/Signup site</a></li> -->
+            <!-- <li><a href="">Static Website</a></li> -->
             <!-- <li><a href="">More navigation</a></li> -->
           </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="page-header">Dashboard</h1>
+          <h1 class="page-header">Basic Settings</h1>
 
-          <div class="row placeholders">
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4>Label</h4>
-              <span class="text-muted">Something else</span>
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingOne">
+                <h4 class="panel-title">
+                  <a id="desc_head" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Introduction
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-body" id="description">
+                The Apache HTTP Server, colloquially called Apache, is the world's most widely-used Web
+                 server software. Apache supports a variety of features, many implemented as compiled 
+                 modules which extend the core functionality. These can range from server-side
+                  programming language support to authentication schemes. It also features configurable 
+                  error messages.
+                </div>
+              </div>
             </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4>Label</h4>
-              <span class="text-muted">Something else</span>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingTwo">
+                <h4 class="panel-title">
+                  <a id="desc_head" class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Starting the Apache Server
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="panel-body" id="description">
+                   Apache can be started by the following command:<br>
+                    <code>/etc/init.d/apache2 restart</code>
+                </div>
+              </div>
             </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4>Label</h4>
-              <span class="text-muted">Something else</span>
-            </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4>Label</h4>
-              <span class="text-muted">Something else</span>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingThree">
+                <h4 class="panel-title">
+                  <a id="desc_head" class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Stopping the Apache Server
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <div class="panel-body" id="description">
+                  Apache can be stopped by the following command:<br>
+                    <code>/etc/init.d/apache2 stop</code>
+
+                </div>
+              </div>
             </div>
           </div>
 
-          <h2 class="sub-header">Section title</h2>
-          <div class="table-responsive">
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Header</th>
-                  <th>Header</th>
-                  <th>Header</th>
-                  <th>Header</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1,001</td>
-                  <td>Lorem</td>
-                  <td>ipsum</td>
-                  <td>dolor</td>
-                  <td>sit</td>
-                </tr>
-                <tr>
-                  <td>1,002</td>
-                  <td>amet</td>
-                  <td>consectetur</td>
-                  <td>adipiscing</td>
-                  <td>elit</td>
-                </tr>
-                <tr>
-                  <td>1,003</td>
-                  <td>Integer</td>
-                  <td>nec</td>
-                  <td>odio</td>
-                  <td>Praesent</td>
-                </tr>
-                <tr>
-                  <td>1,003</td>
-                  <td>libero</td>
-                  <td>Sed</td>
-                  <td>cursus</td>
-                  <td>ante</td>
-                </tr>
-                <tr>
-                  <td>1,004</td>
-                  <td>dapibus</td>
-                  <td>diam</td>
-                  <td>Sed</td>
-                  <td>nisi</td>
-                </tr>
-                <tr>
-                  <td>1,005</td>
-                  <td>Nulla</td>
-                  <td>quis</td>
-                  <td>sem</td>
-                  <td>at</td>
-                </tr>
-                <tr>
-                  <td>1,006</td>
-                  <td>nibh</td>
-                  <td>elementum</td>
-                  <td>imperdiet</td>
-                  <td>Duis</td>
-                </tr>
-                <tr>
-                  <td>1,007</td>
-                  <td>sagittis</td>
-                  <td>ipsum</td>
-                  <td>Praesent</td>
-                  <td>mauris</td>
-                </tr>
-                <tr>
-                  <td>1,008</td>
-                  <td>Fusce</td>
-                  <td>nec</td>
-                  <td>tellus</td>
-                  <td>sed</td>
-                </tr>
-                <tr>
-                  <td>1,009</td>
-                  <td>augue</td>
-                  <td>semper</td>
-                  <td>porta</td>
-                  <td>Mauris</td>
-                </tr>
-                <tr>
-                  <td>1,010</td>
-                  <td>massa</td>
-                  <td>Vestibulum</td>
-                  <td>lacinia</td>
-                  <td>arcu</td>
-                </tr>
-                <tr>
-                  <td>1,011</td>
-                  <td>eget</td>
-                  <td>nulla</td>
-                  <td>Class</td>
-                  <td>aptent</td>
-                </tr>
-                <tr>
-                  <td>1,012</td>
-                  <td>taciti</td>
-                  <td>sociosqu</td>
-                  <td>ad</td>
-                  <td>litora</td>
-                </tr>
-                <tr>
-                  <td>1,013</td>
-                  <td>torquent</td>
-                  <td>per</td>
-                  <td>conubia</td>
-                  <td>nostra</td>
-                </tr>
-                <tr>
-                  <td>1,014</td>
-                  <td>per</td>
-                  <td>inceptos</td>
-                  <td>himenaeos</td>
-                  <td>Curabitur</td>
-                </tr>
-                <tr>
-                  <td>1,015</td>
-                  <td>sodales</td>
-                  <td>ligula</td>
-                  <td>in</td>
-                  <td>libero</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
+          
+        
       </div>
     </div>
 

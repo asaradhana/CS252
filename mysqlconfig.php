@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Apache GUI User Session</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="dashboard.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="dist/assets/js/ie-emulation-modes-warning.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+   
+
+   <script src="jquery.metisMenu.js"></script>
+   <script>
+       $(function () {
+           $('#menu').metisMenu();
+       });
+   </script>
+
+
+
+    <style type="text/css"> 
+    #description{
+      font-size: 20px;
+    }
+    #desc_head{
+      font-size: 25px;
+    }
+    </style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="dashboard.php">Apache GUI</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="dashboard.php">Dashboard</a></li>
+            <li><a href="#">Settings</a></li>
+            <!-- <li><a href="#">Profile</a></li> -->
+            <li><a href="#">Help</a></li>
+          </ul>
+          <form class="navbar-form navbar-right">
+            <input type="text" class="form-control" placeholder="Search...">
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li><a href="dashboard.php">Apache Server Control<span class="sr-only">(current)</span></a></li>
+            <li><a href="apacheconfig.php">Apache Server Configuration</a></li>
+            <!-- <li><a href="#">Apache Log Statics</a></li> -->
+            <!-- <li><a href="#">Export</a></li> -->
+          </ul>
+          <ul class="nav nav-sidebar">
+            <li><a href="phpconfig.php">PHP Server Configuration</a></li>
+            <li class="active"><a href="mysqlconfig.php">Mysql Server Configuration</a></li>
+            <!-- <li><a href="">Another nav item</a></li> -->
+          </ul>
+          <ul class="nav nav-sidebar">
+            <li><a href="gen_homepage.php">Home Page</a></li>
+            <!-- <li id="menu"><a href="gen_blog.php">Your Blog</a></li> -->
+            <!-- <ul> -->
+              <li><a href="gen_blog.php">Make a New Blog</a></li>
+              <li><a href="blogentry.php">Post a New Article</a></li>
+            <!-- </ul> -->
+            <!-- <li><a href="">Signin/Signup site</a></li> -->
+            <!-- <li><a href="">Static Website</a></li> -->
+            <!-- <li><a href="">More navigation</a></li> -->
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h1 class="page-header">Basic Settings</h1>
+
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingOne">
+                <h4 class="panel-title">
+                  <a id="desc_head" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Introduction
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-body" id="description">
+                MySQL is the world's second most widely used open-source relational database management 
+                system. It is a popular choice of database for use in web applications. MySQL stores 
+                accounts in the user table of the mysql database. An account is defined in terms of a 
+                user name and the client host or hosts from which the user can connect to the server.
+                 <br /><br />
+                <p>Run the following  on your teminal to do respective action</p>
+                <p>Starting Mysql </p>
+                <code>sudo service mysql start</code>
+                <p>Stopping Mysql </p>
+                <code>sudo service mysql stop</code>
+                <p>Restarting Mysql </p>
+                <code>sudo service mysql restart</code>
+                </div>
+              </div>
+            </div>
+
+             <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingTwo">
+                <h4 class="panel-title">
+                  <a id="desc_head" class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    MySQL Installation Guide 
+                  </a>
+                </h4>
+              </div>
+            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="panel-body" id="description">
+                   MySQL can be installed by the following command:<br>
+                  <code>sudo apt-get install mysql-server libapache2-mod-auth-mysql php5-mysql</code>
+                  <br> After the installation, you can change the <em>bind address</em> to your own internal
+                  ip address. You can also set your root password for MySQL.
+                  
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingTwo">
+                <h4 class="panel-title">
+                  <a id="desc_head" class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    MySQL Add User
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <div class="panel-body" id="description">
+                  User names, as used by MySQL for authentication purposes, have nothing to do with 
+                  user names (login names) as used by Windows or Unix. On Unix, most MySQL clients by 
+                  default try to log in using the current Unix user name as the MySQL user name, but 
+                  that is for convenience only. The default can be overridden easily, because client 
+                  programs permit any user name to be specified with a <code>-u</code> or 
+                  <code>--user</code> option.
+
+                  <a href="mysql_adduser.sh"><h4>click here to download the script</h4></a>
+                  <code>#!/bin/bash
+                        user= $1
+                        pass= $2
+                        mysql -u root -p  << EOF
+                        CREATE USER '$user'@'localhost' IDENTIFIED BY '$pass';
+                        GRANT ALL PRIVILEGES ON * . * TO '$user'@'localhost';
+                        flush privileges;
+                        EOF</code>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingFour">
+                <h4 class="panel-title">
+                  <a id="desc_head" class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    Root Password Change 
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                <div class="panel-body" id="description">
+                   MySQL provides you with a root password to protect your data from being modified by 
+                   other users. You are required to enter the password at the time of starting MySQL. 
+                   The server uses MySQL passwords stored in the user table to authenticate client 
+                   connections using MySQL built-in authentication. MySQL encrypts passwords stored in 
+                   the user table using its own algorithm.
+
+                   <a href="mysql_passchange.sh"><h4>click here to download the script</h4></a>
+                  <code>#!/bin/bash
+                    pass1= $1
+                    pass2= $2
+                    mysql -u root -p '$pass1' << EOF
+                    use mysql;
+                    update user set password=PASSWORD('$pass2') where User='root';
+                    flush privileges;
+                    EOF</code>
+
+
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingFive">
+                <h4 class="panel-title">
+                  <a id="desc_head" class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    Bind Address
+
+
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                <div class="panel-body" id="description">
+                  The MySQL server listens on a single network socket for TCP/IP connections which can
+                  be specified by the bind address. This socket is bound to a single address, but it is
+                   possible for an address to map onto multiple network interfaces. The default address 
+                   is 0.0.0.0. To specify an address explicitly, use the <code>--bind-address=addr</code>
+                    option at server startup, where <em>addr</em> is an IPv4 address or a host name.
+                
+                    <a href="mysql_bind.sh"><h4>click here to download the script</h4></a>
+                  <code>#!/usr/bin/bash
+                      rep="bind-address = 127.0.0.1"
+                      bindad=$1
+                      line="bind-address = '$bindad'"
+                      sed -i "s/$rep/$line/" /etc/mysql/my.cnf</code>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+        
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+    <script src="dist/assets/js/docs.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="dist/assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
