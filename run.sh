@@ -10,3 +10,5 @@ sudo apt-get install mysql-server libapache2-mod-auth-mysql php5-mysql
 sudo mysql_install_db
 
 sudo service apache2 restart
+
+//something there
